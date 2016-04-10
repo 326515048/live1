@@ -41,6 +41,7 @@
             $("#jqxgrid").jqxGrid(
                     {
                         width: 250,
+                        height: '50%',
                         source: dataAdapter,
                         columnsresize: true,
                         columns: [

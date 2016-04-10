@@ -22,7 +22,7 @@
                   value="org.sqlite.JDBC">
         </property>
         <property name="url"
-                  value="jdbc:sqlite:/Users/weiwchen/IdeaProjects/live1/live1.s3">
+                  value="jdbc:sqlite:D:/ideaWorkspaces/live1/live1.s3">
             <!--jdbc:sqlite:/Users/weiwchen/IdeaProjects/live1/live1.s3-->
             <!--jdbc:sqlite:D:/ideaWorkspaces/live1/live1.s3-->
         </property>
@@ -40,5 +40,6 @@
 
     <mvc:resources location="/jqwidgets/" mapping="/jqwidgets/**"/>
     <mvc:resources location="/scripts/" mapping="/scripts/**"/>
+    <mvc:resources location="/js/" mapping="/js/**"/>
 
 </beans>
