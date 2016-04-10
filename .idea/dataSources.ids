@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="Sqlite (Xerial) - live1.s3" uuid="be2d4bc9-e1c5-480b-abb2-4cd74919271b">
+    <database-info product="SQLite" version="3.8.9" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native"/>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed"/>
+    <schema name="" catalog=""/>
+    <table name="_cities" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="TEXT" precision="0" scale="-1" nullable="false" jdbcType="12"/>
+      <column name="cityName" sqlType="TEXT" precision="0" scale="-1" nullable="false" jdbcType="12"/>
+      <column name="b2type" sqlType="INT" precision="0" scale="-1" nullable="true" jdbcType="4" def="MA=="/>
+      <primary-key columns="id"/>
+    </table>
+  </data-source>
+</component>

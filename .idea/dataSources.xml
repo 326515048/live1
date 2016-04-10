@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="2427769637">
+    <data-source source="LOCAL" name="Sqlite (Xerial) - live1.s3" uuid="be2d4bc9-e1c5-480b-abb2-4cd74919271b">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/live1.s3</jdbc-url>
+    </data-source>
+  </component>
+</project>
