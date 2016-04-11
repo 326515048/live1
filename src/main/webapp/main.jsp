@@ -5,11 +5,17 @@
 <script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="js/jquery.layout-latest.js"></script>
 <script type="text/javascript">
-$(document).ready(function () {
-	$('body').layout({ applyDemoStyles: true });
-	$("#westContent").load("/pages/jsp/cities.jsp");
-	$("#btn1").click(function(){
-		$("#mainContent").load("/pages/jsp/cities.jsp");
+
+	$(document).ready(function () {
+		// PAGE LAYOUT
+		var myLayout = $("body").layout({
+			applyDefaultStyles: true,
+			west__size: 350
+		});
+
+		$("#westContent").load("/pages/jsp/cities.jsp");
+		$("#btn1").click(function(){
+			$("#mainContent").load("/pages/jsp/cities.jsp");
 	})
 });
 </script>
@@ -22,8 +28,6 @@ $(document).ready(function () {
 </div>
 <div class="ui-layout-north">North</div>
 <div class="ui-layout-south">South</div>
-<div class="ui-layout-west" id="westContent">West
-	<button id="btn1">Baidu</button>
-</div>
+<div class="ui-layout-west" id="westContent" style="width: 500px"></div>
 </body>
 </html>

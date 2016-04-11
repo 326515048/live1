@@ -40,14 +40,30 @@
 
             $("#jqxgrid").jqxGrid(
                     {
-                        width: 250,
+                        width: 300,
                         height: '50%',
                         source: dataAdapter,
                         columnsresize: true,
+                        showtoolbar: true,
+                        rendertoolbar: function (toolbar) {
+                            //var me = this;
+                            var container = $("<div style='margin: 5px;'></div>");
+                            toolbar.append(container);
+                            container.append('<input id="newButton" type="button" value="New" />');
+                            container.append('<input style="margin-left: 5px;" id="delButton" type="button" value="Delete" />');
+                            $("#newButton").jqxButton();
+                            $("#delButton").jqxButton();
+                        },
                         columns: [
                             { text: 'ID', datafield: 'id', width: 150, hidden: true},
                             { text: '城市', datafield: 'cityName', width: 150 },
-                            { text: 'B2B_B2C', datafield: 'b2type', width: 100 }
+                            { text: 'B2B_B2C', datafield: 'b2type', width: 100 },
+                            { text: 'Edit', datafield: 'Edit', columntype: 'button', cellsrenderer: function () {
+                                return "Edit";
+                            }, buttonclick: function (row) {
+
+                            }
+                            }
                         ]
                     });
         });
