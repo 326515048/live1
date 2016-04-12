@@ -6,9 +6,13 @@
         resized, pinned, unpinned and closed.</title>
     <link rel="stylesheet" href="../../jqwidgets/styles/jqx.base.css" type="text/css" />
     <style type="text/css">
-        .jqx-layout-group-auto-hide-content-vertical
-        {
-            width: 200px;
+        body, html {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            padding: 3px;
+            box-sizing: border-box;
+            margin: 0;
         }
     </style>
     <script type="text/javascript" src="../../scripts/jquery-1.11.1.min.js"></script>
@@ -26,58 +30,54 @@
                 items: [{
                     type: 'layoutGroup',
                     orientation: 'vertical',
-                    width: 500,
+                    width: '30%',
+                    minWidth: '15%',
                     items: [{
                         type: 'documentGroup',
-                        height: 400,
-                        minHeight: 200,
+                        height: '50%',
+                        minHeight: '25%',
                         items: [{
                             type: 'documentPanel',
-                            title: 'Document 1',
-                            contentContainer: 'Document1Panel',
+                            title: 'Cities',
+                            contentContainer: 'ContainerCities',
 							initContent: function () {
 								$("#D1Pan").load("cities.jsp");
 							}
                         }, {
                             type: 'documentPanel',
-                            title: 'Document 2',
+                            title: 'Bitrate',
                             contentContainer: 'Document2Panel'
                         }]
                     }, {
-                        type: 'tabbedGroup',
-                        height: 200,
-                        pinnedHeight: 30,
+                        type: 'documentGroup',
+                        height: '50%',
+                        pinnedHeight: '10%',
                         items: [{
-                            type: 'layoutPanel',
+                            type: 'documentPanel',
                             title: 'Error List',
                             contentContainer: 'ErrorListPanel'
-                        }, {
-                            type: 'layoutPanel',
-                            title: 'Output',
-                            contentContainer: 'OutputPanel',
-                            selected: true
                         }]
                     }]
                 }, {
-                    type: 'tabbedGroup',
-                    width: 300,
-                    minWidth: 200,
+                    type: 'documentGroup',
+                    width: '70%',
+                    minWidth: '30%',
                     items: [{
-                        type: 'layoutPanel',
+                        type: 'documentPanel',
                         title: 'Solution Explorer',
                         contentContainer: 'SolutionExplorerPanel',
                         initContent: function () {
                             // initialize a jqxTree inside the Solution Explorer Panel
                         }
                     }, {
-                        type: 'layoutPanel',
+                        type: 'documentPanel',
                         title: 'Properties',
                         contentContainer: 'PropertiesPanel'
                     }]
                 }]
             }];
 
-            $('#jqxLayout').jqxLayout({ width: 800, height: 600, layout: layout });
+            $('#jqxLayout').jqxLayout({ width: '98%', height: '98%', layout: layout });
         });
     </script>
 </head>
@@ -86,27 +86,27 @@
         <!--The panel content divs can have a flat structure-->
         <!--autoHideGroup-->
         <div data-container="ToolboxPanel">
-            List of tools</div>
+            </div>
         <div data-container="HelpPanel">
             Help topics</div>
         <!--documentGroup-->
-        <div data-container="Document1Panel">
+        <div data-container="ContainerCities">
 			<div id="D1Pan" />
 		</div>
         <div data-container="Document2Panel">
-            Document 2 content</div>
+            </div>
         <!--bottom tabbedGroup-->
         <div data-container="ErrorListPanel">
-            List of errors</div>
+            </div>
         <div data-container="OutputPanel">
-            Output</div>
+           </div>
         <!--right tabbedGroup-->
         <div data-container="SolutionExplorerPanel">
             <div id="solutionExplorerTree" style="border: none;">
             </div>
         </div>
         <div data-container="PropertiesPanel">
-            List of properties</div>
+            </div>
     </div>
 </body>
 </html>
